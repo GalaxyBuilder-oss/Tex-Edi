@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 50px 30px;
+            grid-template-columns: repeat(4,1fr);
+            > figure {
+                margin: 0;
+                > img {
+                    height: 100px;
+                    /*biar tinggi gambarnya merata width/height*/
+                    /* aspect-ratio: 5/4; */
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <input type="text" id="">
+ 
+    </main>
+    <footer>
+        <form action="tampilan.html" method="post">
+            <label for="nama">Username</label>>
+            <input type="text" id="nama">
+        </form>
+    </footer>
+    <!-- <script>
+        let login=document.getElementById("nama")
+        login.addEventListener("submit",() => {
+            alert(login.value)
+        })
+        // variable untuk menampung alamat API
+        // let API = "https://restcountries.com/v3.1/all"
+        let API = "https://restcountries.com/v3.1/name/"
+
+        let input = document.querySelector('input')
+
+        input.addEventListener('change',()=>{
+
+            // fecth() berfungsi mengambil data dari api
+            // then yang pertama untuk mengecek apakah Si API bisa di hubungkan
+        // then kedua untuk mengambil data dan memindahkannya ke elemen yang di siapkan
+        fetch(API+input.value).then((res)=> res.json()).then((countries)=>{
+            countries.map((country)=>{
+
+                // membuat elemen
+                let fg = document.createElement('figure')
+                let image = document.createElement('img')
+                let fc = document.createElement('figcaption')
+
+                // mengisi elemen
+                image.src=country.flags.png
+                fc.innerText=country.name.official
+
+                // memasukkan elemen yang di buat dengan html
+                fg.append(image)
+                fg.append(fc)
+                document.querySelector('.container').append(fg)
+            })
+        })
+    })
+    </script> -->
+    <script>
+        const url = 'https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&currency=USD&sizeSchema=US&lang=en-US';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '2c5bf94e6emsh17a5d2bb64804c5p10d9a5jsnbf185081f780',
+		'X-RapidAPI-Host': 'asos2.p.rapidapi.com'
+	}
+};
+fetch(url, options).then((response)=>response.json()).then((data)=>{
+    data.products.forEach((product)=>{
+        document.write(product.name);
+    })
+})
+    </script>
+</body>
+</html>
