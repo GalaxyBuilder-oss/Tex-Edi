@@ -1,8 +1,7 @@
-<h1>Project📝</h1>
-<h1>Uses⚙️</h1>
-<h1>Additonal</h1>
-<h1>About Me😎</h1>
-<marquee>GalaxyBuilder</marquee>
+# 📝Text Edi
+# ⚙️Components
+# Additonal
+# About Me
 - Hi, I’m GalaxyBuilder! Nice To Meet You👋
 - 👀 I’m interested in Coding And Designing
 - 🌱 I’m currently learning A C Language
